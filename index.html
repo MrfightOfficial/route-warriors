@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Route Warriors - For Delivery Drivers, By Delivery Drivers">
+    <title>Route Warriors</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/riplet.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="../src/assets/routeWarriors.png" alt="Route Warriors Logo" class="nav-logo">
+                <span class="logo-text">Route Warriors</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#game">Delivery Chaos Game</a>
+                <a href="#jobs">Find Jobs</a>
+                <a href="#verify">Driver Verification</a>
+                <a href="#community">Community Hub</a>
+            </div>
+            <button class="discord-btn">
+                <i class="fab fa-discord"></i> Join Our Discord
+            </button>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <img src="../src/assets/routeWarriors.png" alt="Route Warriors Logo" class="hero-logo">
+                <h1>Welcome to Route Warriors</h1>
+                <p class="tagline">The Ultimate Community for Delivery Drivers</p>
+                <div class="moving-truck">🚚</div>
+                <button class="cta-button discord-btn">
+                    <i class="fab fa-discord"></i> Join Our Discord
+                </button>
+            </section>
+
+            <section class="features-grid">
+                <div class="feature-box">
+                    <span class="feature-icon">🚚</span>
+                    <h3>Routey Bot</h3>
+                    <p>Enhance your delivery experience with our custom Discord bot, designed to assist and entertain drivers.</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon">🎮</span>
+                    <h3>Delivery Chaos Simulator</h3>
+                    <p>Test your skills in our fast-paced delivery game. Compete with others and climb the leaderboard!</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Job Search Tool</h3>
+                    <p>Find local delivery jobs from top companies like Amazon, FedEx, and UPS. Filter by location, pay, and more.</p>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <h2>Why We Exist</h2>
+                <p>📦 Welcome to Route Warriors! A chill community created for delivery drivers, by delivery drivers – but also a home for anyone who vibes with the grind, the chaos, and the laughs along the way.</p>
+                <p>👤 <strong>Founded by:</strong> @Jaedon (Tiktok: @clear2rts)</p>
+                <p>📅 <strong>Created on:</strong> March 2025</p>
+                <p>🌍 <strong>Who's welcome?</strong></p>
+                <ul>
+                    <li>Amazon Flex / DSP / Delivery Drivers</li>
+                    <li>FedEx / UPS / DHL / OnTrac / USPS</li>
+                    <li>Gig workers (DoorDash, Instacart, Uber, etc)</li>
+                    <li>Friends, fam, and fans of the hustle</li>
+                </ul>
+                <p>🏁 <strong>Why Route Warriors exists:</strong> To give burnt-out drivers a place to relax, laugh, vent, and connect. Whether you're unloading 300 stops or just lurking, you're part of the crew.</p>
+            </section>
+
+            <router-outlet></router-outlet>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <a href="/privacy"><i class="fas fa-user-shield"></i> Privacy Policy</a>
+                    <a href="/terms"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                    <a href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.google.com/maps" target="_blank"><i class="fas fa-map-marker-alt"></i> Find Us on Maps</a>
+                </div>
+                <div class="discord-widget">
+                    <h3>Join Our Active Discord Community</h3>
+                    <iframe 
+                        src="https://discord.com/widget?id=1356352527356006573&theme=dark" 
+                        allowtransparency="true" 
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" 
+                        style="width: 100%; height: 300px; border: none; border-radius: 8px;">
+                    </iframe>
+                    <a href="https://discord.gg/MxTCavE46T" target="_blank" class="cta-button">
+                        <i class="fab fa-discord"></i> Join Now
+                    </a>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://tiktok.com/@clear2rts" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
