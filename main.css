@@ -1,0 +1,365 @@
+:root {
+    --primary-dark: #232f3e; /* Amazon dark blue */
+    --secondary-dark: #37475a;
+    --amazon-orange: #ff9900;
+    --text-primary: #ffffff;
+    --text-secondary: #d5d5d5;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.main-nav {
+    background-color: var(--secondary-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.discord-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--amazon-orange);
+    margin-right: 10px;
+}
+
+.amazon-arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-logo {
+    width: 40px; /* Adjusted size for the navigation bar */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between the logo and text */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--amazon-orange);
+}
+
+.hero {
+    min-height: 70vh; /* Reduced height to move content up */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content closer to the top */
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(45deg, var(--primary-dark), var(--secondary-dark));
+    padding: 1rem; /* Reduced padding to minimize spacing */
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem; /* Slightly smaller font size */
+    color: var(--amazon-orange);
+    margin-bottom: 0.5rem; /* Reduced margin below the heading */
+}
+
+.hero .tagline {
+    font-size: 1rem; /* Slightly smaller font size */
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem; /* Reduced margin below the tagline */
+}
+
+.hero-logo {
+    width: 180px; /* Slightly smaller size for better fit */
+    max-width: 100%;
+    margin-bottom: 1rem; /* Reduced margin below the logo */
+    display: block;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.moving-truck {
+    position: absolute;
+    font-size: 2rem;
+    animation: driveTruck 15s linear infinite;
+    bottom: 75px; /* Moved 10px up to sit on the edge of the color change */
+    left: 100%; /* Start from the right edge of the screen */
+    white-space: nowrap; /* Prevents scrolling effect */
+    overflow: hidden; /* Ensures no overflow issues */
+}
+
+@keyframes driveTruck {
+    from {
+        transform: translateX(0); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100vw); /* Move to the left */
+    }
+}
+
+.hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('../assets/hero-bg.jpg') center/cover;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--secondary-dark);
+}
+
+.feature-box {
+    background: var(--primary-dark);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--amazon-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: var(--amazon-orange);
+}
+
+.cta-button {
+    background-color: var(--amazon-orange);
+    color: var(--primary-dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.discord-btn {
+    background-color: var(--amazon-orange);
+    color: var(--primary-dark);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.discord-btn:hover {
+    transform: scale(1.05);
+    background-color: #e68a00;
+}
+
+.about-section {
+    padding: 2rem;
+    background-color: var(--secondary-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.about-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--amazon-orange);
+    margin-bottom: 1rem;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    color: var(--text-secondary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem; /* Add spacing above social links */
+}
+
+.social-links a {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--amazon-orange);
+}
+
+.main-footer {
+    background-color: var(--secondary-dark);
+    color: var(--text-secondary);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem; /* Increased gap for better spacing */
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    align-items: start;
+}
+
+.footer-links {
+    text-align: left;
+    font-size: 1.1rem; /* Increase font size for better visibility */
+    line-height: 1.8;
+}
+
+.footer-links h4 {
+    font-size: 1.5rem;
+    color: var(--amazon-orange);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--amazon-orange);
+}
+
+.discord-widget {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--amazon-orange);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Ensure it fills available space */
+}
+
+.discord-widget h3 {
+    margin-bottom: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--amazon-orange);
+}
+
+.discord-widget iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.discord-widget .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--amazon-orange);
+    color: var(--primary-dark);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.discord-widget .cta-button:hover {
+    transform: scale(1.05);
+    background-color: #e68a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+}
